@@ -1,0 +1,14 @@
+{% extends 'todo/base.html' %}
+
+
+{% block content %}
+
+<br><a href="{% url 'currentalogin' %}">Back</a>
+<h1>Add to-do</h1>
+<h4 style="color:red"><u>{{ error }}</h4>
+<form method="POST">{{ forms.as_p }}
+    {% csrf_token %}
+<button type="submit">Add</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+<h1>homepage</h1>
+
+{% if user.is_authenticated %}
+<form action="{% url 'currentalogin' %}">
+    <button type="submit">View To-dos</button>
+</form>
+{% else %}
+
+{% endif %}
+{% endblock %}
