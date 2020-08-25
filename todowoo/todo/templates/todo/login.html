@@ -1,0 +1,9 @@
+<a href="{% url 'signupuser' %}">Signup</a>
+
+<h1>Login</h1>
+<h4 style="color:red"><u>{{ error }}</h4>
+<form method="POST">{{ forms.as_p }}
+    {% csrf_token %}
+<button type="submit">Login</button>
+</form>
+
